@@ -58,6 +58,7 @@ Go go go, Bilibili Pikachu!
 | maxRetryIfLiveOff  | 否 | 当目标不在直播时，继续重试的次数。默认0，此时会一直进行尝试，直到主播上线 | 
 | retryAfterMinutes  | 否 | 当目标不在直播时，每次获取直播间信息的时间间隔，单位分钟。默认`5.0` | 
 | plugin  | 否 | 插件功能，允许用户自定义某些操作。默认false |  
+| douyuOnlyAudio | 否 | 斗鱼录制时，是否只获取音频 |
 
 + 各直播源解析情况  
 

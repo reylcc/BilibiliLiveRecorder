@@ -90,6 +90,9 @@ public class Config {
 	@Option(name = "saveFolderAfterCheck", defaultValue = "")
 	public static String saveFolderAfterCheck;
 
+	@Option(name = "douyuOnlyAudio", defaultValue = "false")
+	public static boolean douyuOnlyAudio;
+
 	public static void init(String[] args) {
 		// 根据参数初始化值
 		if (args != null && args.length >= 1) {

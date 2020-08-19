@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import nicelee.bilibili.Config;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -190,7 +191,10 @@ public class RoomDealerDouyu extends RoomDealer {
 			String header = jobj.getJSONObject("data").getString("rtmp_url");
 			String tail = jobj.getJSONObject("data").getString("rtmp_live");
 			String linkURL = header + "/" + tail;
-			Logger.println("链接为：" + linkURL);
+			if (Config.douyuOnlyAudio) {
+				linkURL += "&only-audio=1";
+			}
+			System.out.printf("链接为：" + linkURL + "\r\n");
 			return linkURL;
 		} catch (Exception e) {
 			e.printStackTrace();
