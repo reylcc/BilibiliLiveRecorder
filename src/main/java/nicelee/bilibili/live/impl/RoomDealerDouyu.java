@@ -152,7 +152,7 @@ public class RoomDealerDouyu extends RoomDealer {
 			// 注释3:java调用js方法ub98484234，提示"CryptoJS" is not defined，另需要引入CryptoJS
 			String param = JSEngine.run(scripts, encryptMethod, roomId, ttId, System.currentTimeMillis() / 1000L);
 
-			param += String.format("&cdn=%s&rate=%s&ver=%s&iar=0&ive=1", "", // cdn 可为空
+			param += String.format("&cdn=%s&rate=%s&ver=%s&iar=0&ive=1", "tct-h5", // cdn 可为空
 																				// [{"name":"主线路","cdn":"ws-h5"},{"name":"备用线路5","cdn":"tct-h5"},{"name":"备用线路6","cdn":"ali-h5"}]
 					qn, // rate 模糊到清晰 1，2，... 0 流畅 高清 超清 蓝光4M
 					version);
